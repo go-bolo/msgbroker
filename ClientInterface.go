@@ -1,9 +1,9 @@
 package msgbroker
 
-import "github.com/go-catupiry/catu"
+import "github.com/go-bolo/bolo"
 
 type Client interface {
-	Init(app catu.App) error
+	Init(app bolo.App) error
 	// Register a handler function to receive the new messages
 	// Now we support only one method for each queues
 	Subscribe(queueName string, handler MessageHandler) (string, error)

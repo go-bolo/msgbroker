@@ -1,4 +1,4 @@
-# Message Broker / queues for Go Catupiry Framework
+# Message Broker / queues for Go Bolo Framework
 
 ## Congiguration
 
@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/go-catupiry/catu"
+	"github.com/go-bolo/bolo"
 	"github.com/sirupsen/logrus"
 	"gitlab.com/www.monitordomercado.com.br/mm/msgbroker"
 	"gitlab.com/www.monitordomercado.com.br/mm/msgbroker_nsq"
@@ -33,7 +33,7 @@ func main() {
 
 	var err error
 
-	app := catu.Init()
+	app := bolo.Init()
 
   // Register the NSQ plugin to load its feature in the app
 	app.RegisterPlugin(msgbroker.NewPlugin(&msgbroker.PluginCfgs{
@@ -51,9 +51,6 @@ func main() {
 
 func handleExecutionError(err error) {
 	if err != nil {
-		logrus.WithFields(logrus.Fields{
-			"error": fmt.Sprintf("%+v\n", err),
-		}).Error("main handleExecutionError")
 		os.Exit(1)
 	}
 }

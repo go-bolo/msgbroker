@@ -1,8 +1,6 @@
 package msgbroker
 
-import (
-	"github.com/go-catupiry/catu"
-)
+import "github.com/go-bolo/bolo"
 
 type PluginCfgs struct {
 	Client Client
@@ -30,6 +28,6 @@ func (p *MSGBrokerPlugin) GetName() string {
 	return p.Name
 }
 
-func (p *MSGBrokerPlugin) Init(app catu.App) error {
+func (p *MSGBrokerPlugin) Init(app bolo.App) error {
 	return p.Client.Init(app)
 }
