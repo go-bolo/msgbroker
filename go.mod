@@ -4,7 +4,7 @@ go 1.20
 
 replace github.com/go-bolo/bolo => /home/a/projects/go-bolo/bolo
 
-require github.com/go-bolo/bolo v0.0.0-00010101000000-000000000000
+require github.com/go-bolo/bolo v1.0.0
 
 require (
 	github.com/Masterminds/goutils v1.1.1 // indirect
@@ -46,6 +46,8 @@ require (
 	github.com/shopspring/decimal v1.3.1 // indirect
 	github.com/sirupsen/logrus v1.9.3 // indirect
 	github.com/spf13/cast v1.5.1 // indirect
+	github.com/tdewolff/minify/v2 v2.12.8 // indirect
+	github.com/tdewolff/parse/v2 v2.6.7 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.2.2 // indirect
 	golang.org/x/crypto v0.11.0 // indirect
