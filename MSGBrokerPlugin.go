@@ -31,3 +31,7 @@ func (p *MSGBrokerPlugin) GetName() string {
 func (p *MSGBrokerPlugin) Init(app bolo.App) error {
 	return p.Client.Init(app)
 }
+
+func (p *MSGBrokerPlugin) GetMigrations() []*bolo.Migration {
+	return []*bolo.Migration{}
+}
